@@ -61,9 +61,9 @@ void loop()
       {
     lcd.setCursor(0,1);
     lcd.print("High C02");
-    digitalWrite(Motor ,LOW);
-    digitalWrite(MotorTwo ,LOW);
-    digitalWrite(BigMotor ,LOW);    
+    digitalWrite(Motor ,HIGH);
+    digitalWrite(MotorTwo ,HIGH);
+    digitalWrite(BigMotor ,HIGH);    
     } 
     
   delay(4000);
