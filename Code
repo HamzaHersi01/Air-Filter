@@ -34,7 +34,6 @@ void setup()
 void loop()
 {
   int val;
-  int val2 = val/10;
   digitalWrite(Motor ,LOW);
   digitalWrite(MotorTwo ,LOW);
   digitalWrite(BigMotor ,LOW);
@@ -45,14 +44,13 @@ void loop()
   lcd.print("ppm");
   if (val<350)
   {
-  lcd.print(val,DEC);
   lcd.setCursor(0,1);
-  lcd.print("Low C02 Fans off");
+  lcd.print("Low C02: OFF");
   }
     else if (val>350 && val<1000)
       {
       lcd.setCursor(0,1);
-      lcd.print("Normal C02");
+      lcd.print("Normal C02:  ON");
       digitalWrite(Motor ,HIGH);
       digitalWrite(MotorTwo ,HIGH);
       digitalWrite(BigMotor ,HIGH);     
@@ -60,12 +58,12 @@ void loop()
     else if (val >1000)
       {
     lcd.setCursor(0,1);
-    lcd.print("High C02");
+    lcd.print("High C02: ON");
     digitalWrite(Motor ,HIGH);
     digitalWrite(MotorTwo ,HIGH);
     digitalWrite(BigMotor ,HIGH);    
     } 
     
-  delay(4000);
+  delay(1000);
   lcd.clear();
 }
